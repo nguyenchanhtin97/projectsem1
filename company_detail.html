@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Công ty cổ phần bảo hiểm Green</title>
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="lib/data_json.js"></script>
+  <script src="lib/lib.js"></script>
+  
+  <link rel="stylesheet" href="js/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/my_css.css">
+  
+  <script type="text/javascript">
+	$( document ).ready(function() {
+		var param_id = 0;
+		if(getUrlParameter('id')!='') {
+			param_id = getUrlParameter('id');
+		}
+		
+		$("#data_product_name").html(objCompanys[param_id].name);
+		$("#data_product_info").html(objCompanys[param_id].info);
+		$("#data_product_price").html(objCompanys[param_id].price);
+		$("#data_product_adv").html(objCompanys[param_id].adv);
+	});
+  </script>
+</head>
+
+<body>
+  <div class="container>
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-inverse navbar-static-top">
+          <div id="navbar" class="navbar-collapse collapse">
+            <div class="navbar-header col-md-2 text-center">
+              <a hrebf="#"><img class="rounded" src="images/logo.png" width="100" height="100" alt="logo-slogan" id="logo"></a>
+            </div>
+            <div style="height:80px;">
+              <ul class="nav navbar-nav col-md-10">
+                <li class="col-md-2 text-center"><a href="index.html">Trang Chủ</a></li>
+                <li class="dropdown col-md-2 text-center">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giới Thiệu <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Lịch sử công ty</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Tầm Nhìn Của Chúng Tôi</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Mục tiêu Của Chúng Tôi</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown col-md-2 text-center">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Sản Phẩm <span class="caret"></span></a>
+                  <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li >
+                      <a tabindex="-1" href="company_list.html?type=1">Ô tô</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li >
+                      <a tabindex="-1" href="company_list.html?type=2">Xe máy</a>                    
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">Loại xe khác</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="col-md-2 text-center"><a href="#">Tin Tức</a></li>
+                <li class="dropdown col-md-2 text-center"><a href="contact.html">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- End navbar header -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Slide -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="first-slide" src="images/slide/slide1.jpg" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Example headline.</h1>
+            <p>
+              <code>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</code>
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="second-slide" src="images/slide/slide2.jpg" alt="Second slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>
+              <code>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</code>
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="third-slide" src="images/slide/slide3.jpg" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>One more for good measure.</h1>
+            <p>
+              <code>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</code>
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <i class="fas fa-chevron-left"></i>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <i class="fas fa-chevron-right"></i>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- End Slide -->
+  
+  <!-- ================================================== -->
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+      <div class="col-md-7 col-md-push-5">
+        <h2 id="data_product_name" class="featurette-heading">Tên công ty</h2>
+			
+			<!--begin tabs going in wide content -->
+       <ul class="nav nav-tabs" id="maincontent" role="tablist">
+          <li class="active"><a href="#product_info" role="tab" data-toggle="tab">Thông tin sản phẩm</a></li>
+          <li><a href="#product_price" role="tab" data-toggle="tab">Phí bảo hiểm</a></li>
+		  <li><a href="#product_adv" role="tab" data-toggle="tab">Bồi thường</a></li>
+       </ul><!--/.nav-tabs.content-tabs -->
+
+
+       <div class="tab-content">
+          <div class="tab-pane fade in active" id="product_info">
+             <p id="data_product_info">Nội dung thông tin sản phẩm : ...</p>
+          </div><!--/.tab-pane -->
+
+          <div class="tab-pane fade" id="product_price">
+             <p id="data_product_price">Nội dung Phí bảo hiểm : ...</p>
+          </div><!--/.tab-pane -->
+		  
+		  <div class="tab-pane fade" id="product_adv">
+             <p id="data_product_dav">Nội dung Bồi thường : ...</p>
+          </div><!--/.tab-pane -->
+       </div><!--/.tab-content -->
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE2YTg1ZDYwZGU0IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTZhODVkNjBkZTQiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4yNzgxMjUiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
+          data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+  <!-- /END THE FEATURETTES -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="homepage-v4-footer" id="footer">
+      <div class="footer-main container">
+        <div class="social_profile_links_new">
+          <ul class="col-md-3 col-md-push-5">
+            <li class="col-md-2">
+              <a rel="nofollow" target="_blank" href="https://www.facebook.com/" title="Visit Us On Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="col-md-1">
+              <a rel="nofollow" target="_blank" href="https://twitter.com/" title="Follow Us On Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pull-right"><a href="#"><i class="fas fa-angle-up"></i></a></div>
+    </div>
+    <!-- <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p> -->
+  </footer>
+  <!-- END FOOTER -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
